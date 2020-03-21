@@ -1,3 +1,3 @@
 module.exports = {
-    'mongoURI': '',
+    'mongoURI': 'mongodb+srv://Puneeth:Puneeth@cluster0-wbsxg.mongodb.net/test?retryWrites=true&w=majority',
 };
