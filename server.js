@@ -4,13 +4,14 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-app.use(bodyParser.urlencoded(( extended: false )));
 
-const db = require('./config/key').mongoURI
+// app.use(bodyParser.urlencoded(( extended: NewType )));
 
-mongoose.connect(db)
-    .then(onfullfilled:() => console.log('MongoDB connected.'))
-    .catch(onrejected: err => console.log(err));
+const db = require('./config/keys').mongoURI;
+
+// mongoose.connect(db)
+//     .then(onfulfilled:() => console.log('MongoDB connected.'))
+//     .catch(onrejected: err => console.log(err));
 
 app.get('/', (req, res) => {
     res.send("Hello World this is with nodemon . . .");

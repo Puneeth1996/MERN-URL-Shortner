@@ -3,7 +3,9 @@
 Implement a URL shortening service : https://hackmd.io/vlyr-09fT1--as6wnEizOg
 
 
-
+MongoDB 
+puneeth1996trainer@gmail.com
+123password
 
 
 
