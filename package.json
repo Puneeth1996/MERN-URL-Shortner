@@ -1,27 +1,23 @@
 {
-  "name": "mern-url-shortner",
+  "name": "url_shortner_service",
   "version": "1.0.0",
-  "description": "URL SHortner MERN ",
-  "main": "server.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server.js"
+    "start": "node index",
+    "dev": "nodemon index"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Puneeth1996/MERN-URL-Shortner.git"
-  },
+  "keywords": [],
   "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Puneeth1996/MERN-URL-Shortner/issues"
-  },
-  "homepage": "https://github.com/Puneeth1996/MERN-URL-Shortner#readme",
+  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "config": "^3.1.0",
     "express": "^4.17.1",
-    "mongoose": "^5.9.5",
-    "nodemon": "^2.0.2",
-    "uniqid": "^5.2.0"
+    "mongoose": "^5.6.4",
+    "shortid": "^2.2.14",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
