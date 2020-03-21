@@ -65,3 +65,17 @@ Please don’t forget to write your readme file which should contain what/why yo
 
 Push the files to Git Than push the files to server and share the link to submit the assignment.
 
+
+
+
+
+
+
+21 Mar 2020 
+
+WHen working with testing for the api endpoints 
+1. I have used Postman 
+2. I have rest client from VSCode Extension and on api.http file that helps in testing the REST API Functionality.
+
+
+
