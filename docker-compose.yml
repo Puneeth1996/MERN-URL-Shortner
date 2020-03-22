@@ -7,7 +7,7 @@ services:
     ports:
       - '5000:5000'
     links:
-      - mongo
+      - client
 
   client:
     container_name: client
