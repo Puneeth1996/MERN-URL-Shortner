@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 
 import { Navbar,Nav,NavDropdown,Form,Row,Col,Jumbotron,Container,Button } from 'react-bootstrap';
 import axios from 'axios'
+import validator from 'validator'
 
 
 export default class App extends Component {
@@ -19,16 +20,25 @@ export default class App extends Component {
   mySubmitHandler = (event) => {
     event.preventDefault();
     console.log("You are submitting " + this.state.URL);
-    // send a POST request
-    axios.post('http://localhost:5000/api/url/shorten', {
-      "longUrl": this.state.URL
+    const validURL = validator.isURL(this.state.URL, {
+      require_protocol: true
     })
-      .then((response) => {
-        console.log(response);
-      }, (error) => {
-        console.log(error);
-      });
+    if(!validURL){
+      this.setState({shortURL: "Invalid URL Make sure to ensure the url and http(s) protocols are correct."});
     }
+    else{
+      // send a POST request
+      axios.post('http://localhost:5000/api/url/shorten', {
+        "longUrl": this.state.URL
+      })
+        .then((response) => {
+          console.log(response);
+          this.setState({shortURL: response.data.shortUrl});
+        }, (error) => {
+          console.log(error);
+        });
+    }
+  }
 
 
   render() {
@@ -75,10 +85,7 @@ export default class App extends Component {
             </Button>
           </Form.Group>
         </Form>
-          <p>
-            This is a modified jumbotron that occupies the entire horizontal space of
-            its parent.
-          </p>
+        <p>{this.state.shortURL? <a href={this.state.shortURL}>{this.state.shortURL}</a>: ""}</p>
         </Container>
       </Jumbotron>
       
