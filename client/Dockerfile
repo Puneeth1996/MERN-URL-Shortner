@@ -1,13 +1,13 @@
 FROM node
 
-WORKDIR /usr/src/client
+WORKDIR /usr/src/app/client
 
 COPY package.json ./
 
 
 RUN yarn install
 
-COPY /src /usr/src/client
+COPY /src /usr/src/app/client
 
 EXPOSE 3000
 
