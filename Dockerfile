@@ -1,15 +1,9 @@
-FROM node:12.8.0
+FROM node
 
-RUN mkdir /usr/src/server
-WORKDIR /usr/src/server
+WORKDIR /usr/src/app
 
-COPY package*.json ./
-
+COPY package.json /usr/server/app/package.json
 
 RUN npm install
-
-COPY . /usr/src/server
-
-EXPOSE 5000
 
 CMD ["npm", "run", "test"]

@@ -1,15 +1,14 @@
-FROM node:12.8.0
+FROM node
 
-RUN mkdir -p /usr/src/client
 WORKDIR /usr/src/client
 
-COPY package*.json ./
+COPY package.json ./
 
 
-RUN npm install
+RUN yarn install
 
-COPY . /usr/src/client
+COPY /src /usr/src/client
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "start"]

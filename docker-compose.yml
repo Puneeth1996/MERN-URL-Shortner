@@ -6,8 +6,8 @@ services:
     build: .
     ports:
       - '5000:5000'
-    links:
-      - client
+    links: :
+        - client
 
   client:
     container_name: client
