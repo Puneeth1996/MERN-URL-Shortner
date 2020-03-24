@@ -18,7 +18,7 @@ app.use('/api/url', require('./routes/url'));
 
 
 
-const PORT = server.listen(process.env.NODE_ENV || 5000);
+const PORT = (process.env.NODE_ENV || 5000);
 
 
 
