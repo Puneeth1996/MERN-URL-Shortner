@@ -67,9 +67,6 @@ export default class App extends Component {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      
-      
-      
       <Jumbotron fluid>
         <Container>
         <Form onSubmit={this.mySubmitHandler}>

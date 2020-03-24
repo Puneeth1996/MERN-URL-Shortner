@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node index",
+    "start": "node index",
     "dev": "nodemon index",
     "client":"npm start --prefix client",
-    "start": "concurrently \"npm run dev\" \"npm run client\" ",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"   
+    "test": "concurrently \"npm run dev\" \"npm run client\" "
   },
   "keywords": [],
   "author": "",
@@ -20,12 +19,8 @@
     "mongoose": "^5.6.4",
     "shortid": "^2.2.14",
     "valid-url": "^1.0.9"
-  }, 
+  },
   "devDependencies": {
     "nodemon": "^1.19.1"
-  },
-  "engines": {
-      "node": "12.8.0",
-      "npm": "6.10.2"
   }
 }
