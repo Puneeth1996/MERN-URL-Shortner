@@ -14,7 +14,7 @@ app.use('/api/url', require('./routes/url'));
 
 const PORT = process.env.NODE_ENV || 5000;
 if(process.env.NODE_ENV === "production"){
-    app.use(express.stactis("client/build"))
+    app.use(express.static(path.join(__dirname, './client/build')));
 }
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
