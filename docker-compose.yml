@@ -4,8 +4,11 @@ services:
     container_name: server
     restart: always
     build: .
+    volumes: 
+      - '.:/usr/src/server'
+      - './usr/src/server/node_modules'
     ports:
-      - '5000'
+      - '5005:5000'
     links:
       - client
 
@@ -13,27 +16,9 @@ services:
     container_name: client
     restart: always
     build: ./client
+    volumes: 
+      - '.:/usr/src/server/client'
+      - './usr/src/server/client/node_modules'
     ports:
-      - '3000'
+      - '3003:3000'
 
-
-    # version: '3.0' # specify docker-compose version
-
-    # # Define the services/ containers to be run
-    # services:
-    #  angular: # name of the first service
-    #   build: angular-app # specify the directory of the Dockerfile
-    #   ports:
-    #   - "4200:4200" # specify port mapping
-      
-    #  express: # name of the second service
-    #   build: express-server # specify the directory of the Dockerfile
-    #   ports:
-    #   - "3000:3000" #specify ports mapping
-    #   links:
-    #   - database # link this service to the database service
-      
-    #  database: # name of the third service
-    #   image: mongo # specify image to build container from
-    #   ports:
-    #   - "27017:27017" # specify port forwarding

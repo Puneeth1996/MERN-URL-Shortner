@@ -101,3 +101,18 @@ Some usefull commands when working with docker
     docker run -it -p 5000:5000 server
 
     docker build -t server . 
+
+
+
+    https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks/
+
+    docker system prune
+    docker system prune --volumes
+
+    docker images
+    docker container ls -a
+    docker container rm cc3f2ff51cab cd20b396a061
+    docker images rm f3ba977a0494 4f7f7865ecc7 ea3808863632 7610f82c9bc8
+    docker container prune
+    docker image ls
+    docker image rm f3ba977a0494 4f7f7865ecc7 ea3808863632 7610f82c9bc8 7aef30ae6655 4defe8c37688
