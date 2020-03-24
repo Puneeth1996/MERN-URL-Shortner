@@ -79,3 +79,25 @@ WHen working with testing for the api endpoints
 
 
 
+
+
+
+
+
+24 March 2020
+
+
+Some usefull commands when working with docker 
+
+    docker-compose up
+    docker-compose down
+
+
+    docker run -it -p 3000:3000 client
+
+    docker build -t client . 
+
+
+    docker run -it -p 5000:5000 server
+
+    docker build -t server . 
