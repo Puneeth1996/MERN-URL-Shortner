@@ -1,14 +1,14 @@
-FROM node:12.8.0
+FROM node
 
-RUN mkdir -p /usr/src/client
-WORKDIR /usr/src/client
+RUN mkdir -p /usr/src/server/client
+WORKDIR /usr/src/server/client
 
 COPY package*.json ./
 
 
 RUN npm install
 
-COPY . /usr/src/client
+COPY . /usr/src/server/client
 
 EXPOSE 3000
 
