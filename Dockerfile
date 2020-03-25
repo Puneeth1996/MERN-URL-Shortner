@@ -15,4 +15,4 @@ COPY . /usr/src/server
 
 EXPOSE 5000
 
-CMD ["npm", "run", "test"]
+CMD ["npm", "run", "start"]
