@@ -121,3 +121,24 @@ Some usefull commands when working with docker
 
 
     https://stackoverflow.com/questions/33907835/docker-error-cannot-delete-docker-container-conflict-unable-to-remove-reposito
+
+
+
+
+
+
+
+
+Steps to run the project with Docker Installed 
+
+    1. cd into the client folder 
+    2. run docker files by using the below two commands
+        docker build -t client . 
+        docker run -it -p 3001:3000 client
+
+    3. Now in the home director( outside the client folder ie, come out the client folder and into the root project folder )
+        docker build -t server .  
+        docker run -it -p 5000:5000 server 
+
+
+    
