@@ -116,3 +116,8 @@ Some usefull commands when working with docker
     docker container prune
     docker image ls
     docker image rm f3ba977a0494 4f7f7865ecc7 ea3808863632 7610f82c9bc8 7aef30ae6655 4defe8c37688
+
+
+
+
+    https://stackoverflow.com/questions/33907835/docker-error-cannot-delete-docker-container-conflict-unable-to-remove-reposito

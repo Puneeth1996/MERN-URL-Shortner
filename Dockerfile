@@ -4,7 +4,7 @@ RUN mkdir /usr/src/server
 
 WORKDIR /usr/src/server
 
-ENV PATH /usr/src/server/.bin:$PATH
+# ENV PATH /usr/src/server/.bin:$PATH
 
 COPY package*.json ./
 
@@ -15,4 +15,4 @@ COPY . /usr/src/server
 
 EXPOSE 5000
 
-CMD ["node", "run", "start"]
+CMD ["npm", "run", "test"]
