@@ -9,19 +9,22 @@ const app = express();
 // Connect to database
 connectDB();
 
+
+
+
 app.use(express.json());
+
+
+const PORT = (process.env.NODE_ENV || 5000);
 
 // Define Routes
 app.use('/', require('./routes/index'));
 app.use('/api/url', require('./routes/url'));
 
 
-const PORT = (process.env.NODE_ENV || 5000);
-
-
 
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static( '/client/build' ));
+    app.use(express.static( 'client/build' ));
 
     app.get('*', (req, res) => {
         res.sendFile(path.join(__dirname, 'client', 'build', 'index.html')); // relative path
