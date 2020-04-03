@@ -45,7 +45,7 @@ export default class App extends Component {
     return (
       <>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand href="#home">Insta - Car</Navbar.Brand>
+        <Navbar.Brand href="#home">URL Shortner</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
