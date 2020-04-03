@@ -1,4 +1,4 @@
 {
   "mongoURI": "mongodb+srv://Puneeth:Puneeth@cluster0-wbsxg.mongodb.net/test?retryWrites=true&w=majority",
-  "baseUrl": "https://url-shortner-service.herokuapp.com"
+  "baseUrl": "https://damp-meadow-64348.herokuapp.com"
 }
