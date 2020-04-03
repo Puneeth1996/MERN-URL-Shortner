@@ -15,10 +15,10 @@ connectDB();
 app.use(express.json());
 
 
-var port_number = process.env.PORT || 5000;
+const PORT  = (process.env.PORT || 5000);
 
 // Define Routes
-app.use('/api/', require('./routes/index'));
+app.use('/', require('./routes/index'));
 app.use('/api/url', require('./routes/url'));
 
 
@@ -32,4 +32,4 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 
-app.listen(port_number, () => console.log(`Server running on port ${port_number}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
