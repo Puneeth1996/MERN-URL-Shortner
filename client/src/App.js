@@ -28,7 +28,7 @@ export default class App extends Component {
     }
     else{
       // send a POST request
-      axios.post('/shorten', {
+      axios.post('/api/url/shorten', {
         "longUrl": this.state.URL
       })
         .then((response) => {
