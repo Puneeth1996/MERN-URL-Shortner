@@ -141,4 +141,23 @@ Steps to run the project with Docker Installed
         docker run -it -p 5000:5000 server 
 
 
-    
+
+
+
+
+
+
+
+
+MONGODB_URI
+
+mongodb+srv://Puneeth:Puneeth@cluster0-wbsxg.mongodb.net/test?retryWrites=true&w=majority
+
+
+
+NODE_ENV
+
+production
+
+
+
