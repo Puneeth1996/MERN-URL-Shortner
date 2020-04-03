@@ -15,7 +15,7 @@ connectDB();
 app.use(express.json());
 
 
-const PORT = (process.env.NODE_ENV || 5000);
+var port_number = server.listen(process.env.PORT || 5000);
 
 // Define Routes
 app.use('/', require('./routes/index'));
@@ -32,4 +32,4 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(port_number, () => console.log(`Server running on port ${port_number}`));
