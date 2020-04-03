@@ -15,7 +15,7 @@ connectDB();
 app.use(express.json());
 
 
-var port_number = server.listen(process.env.PORT || 5000);
+var port_number = process.env.PORT || 5000;
 
 // Define Routes
 app.use('/', require('./routes/index'));
